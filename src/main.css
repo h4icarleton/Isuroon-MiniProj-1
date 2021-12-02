@@ -1,3 +1,5 @@
+/* Styling for Find A Doc Page  */
+
 label {
     font-size: 20px;
 }
@@ -17,3 +19,4 @@ label[for=postal] {
 #findadoc {
     font-size: 40px;
 }
+/*                               */
