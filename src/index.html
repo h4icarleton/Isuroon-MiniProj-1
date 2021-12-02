@@ -8,19 +8,25 @@
         <meta name="author" content="Hack4Impact Carleton" />
         <title>Isuroon MiniProj 1</title>
         <link rel="stylesheet" href="main.css" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <style>
+            body {
+                font-family: 'Roboto';
+            }
+        </style>
     </head>
     <body>
-        <h1>Find a doctor:</h1>
+        <h1 id="findadoc">Find a Doctor:</h1>
         <div class="search_container">
             <label for="fname">First name:</label>
             <input type="text" id="fname" name="fname">
             <label for="lname">Last name:</label>
-            <input type="text" id="fname" name="fname"><br><br>
-            <label for="lname">City:</label>
-            <input type="text" id="fname" name="fname">
-            <label for="lname">Postal Code:</label>
-            <input type="text" id="fname" name="fname"><br><br>
-            <label for="lname">State:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city">
+            <label for="postal">Postal code:</label>
+            <input type="text" id="postal" name="postal"><br><br>
+            <label for="states">State:</label>
             <select name="states" id="states">
                 <option value="alabama">Alabama</option>
                 <option value="alaska">Alaska</option>

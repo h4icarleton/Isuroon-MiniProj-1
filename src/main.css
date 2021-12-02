@@ -1,0 +1,19 @@
+label {
+    font-size: 20px;
+}
+label[for=lname] {
+    margin-left: 40px;
+    margin-right: 10px;
+}
+label[for=postal] {
+    margin-left: 38px;
+}
+#city {
+    margin-left: 60px;
+}
+#states {
+    margin-left: 48px;
+}
+#findadoc {
+    font-size: 40px;
+}
