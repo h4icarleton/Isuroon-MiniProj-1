@@ -1,22 +1,57 @@
+body {
+    font-family: 'Roboto';
+}
 /* Styling for Find A Doc Page  */
-
-label {
-    font-size: 20px;
-}
-label[for=lname] {
-    margin-left: 40px;
-    margin-right: 10px;
-}
-label[for=postal] {
-    margin-left: 38px;
-}
-#city {
-    margin-left: 60px;
-}
-#states {
-    margin-left: 48px;
-}
 #findadoc {
     font-size: 40px;
+}
+label {
+    font-size: 18px;
+}
+input {
+    width: 250px;
+    height: 15px;
+}
+.search_container {
+    display: grid;
+    grid-gap: 10px 50px;
+    margin: 20px;
+}
+.search_item {
+    display: inline-grid;
+}
+.item_1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.item_2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.item_3 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.item_4 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.item_5 {
+    width: 20px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
 }
 /*                               */
