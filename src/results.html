@@ -12,9 +12,10 @@
     </head>
     <body>
         <h1 id="Results"><button type="button" id="backToSearch">INSERT BACK BUTTON</button> Results:</h1>
-        <!-- Insert Doc Card here -->
+        
         <div id="results_container">
-            <div class="card"> 
+            <!-- Insert Doc Card here -->
+            <div class="card"> <!-- Do fields need to be divs instead? -->
                 <h2 class="name">Dr: </h2>
                 <h3 class="credentials">Credentials</h3>
                 <h3 class="gender">Gender:</h3>
@@ -44,41 +45,14 @@
             <button type="button" class="reviews">See Reviews</button>
         </div>
 
-        <script>
-            function createCards(n){ // need number of cards
-                var element = document.getElementById("copy");
-                element.innerHTML = "<div class=\"card\">" + element.innerHTML + "</div>";
-                var item = element.innerHTML;
-                for(var i=0; i<n; i++){ 
-                    var container = document.getElementById("results_container");
-                    container.innerHTML += item;
-                } 
-            }
+        <script src="index.js">
             createCards(6); // Create a specific number of cards
 
             var cards = document.getElementsByClassName("card");
             for(let i of cards){
                 var cardName = i.getElementsByTagName("h2");
                 cardName.innerHTML = "Dr. York"
-            }
-        </script>
-
-
-        <script src="index.js">
-
-        //     function createCards(n){ // need number of cards
-        //         var element = document.getElementById("copy");
-        //         element.innerHTML = "<div class=\"card\">" + element.innerHTML + "</div>";
-        //         var item = element.innerHTML;
-        //         for(var i=0; i<n; i++){ 
-        //             var container = document.getElementById("results_container");
-        //             container.innerHTML += item;
-        //         } 
-        //     } // Want to add all cards needed
-
-
-
-
+            } // not working yet
 
         //     var cards = document.getElementsByClassName("card");
         //     var name = document.getElementsByClassName("name"); 
@@ -98,6 +72,7 @@
         //             lastupdated[i].innerHTML = "Last Updated: " + "";           
         //         }
         //     }
-        // </script>
+        </script>
+
     </body>
 </html>
