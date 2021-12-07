@@ -26,7 +26,6 @@ input {
     grid-row-start: 1;
     grid-row-end: 2;
 }
-
 .item_2 {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -101,3 +100,88 @@ input {
     grid-row-end: 4;
 } 
 /*                               */
+/*Results Styling Here*/
+#Results{font-size: 40px;}
+#results_container{
+    height: 650px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    overflow: auto;
+    /* align-content: center; */
+}
+
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "Name           tax"
+    "Credentials    tax"
+    "Gender         tax" 
+    "Location       lastUpdated"
+    "Reviews        Reviews";
+    background-color: gray;
+    height:fit-content;
+    font-size: 25 px;
+    box-shadow: inset;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 5px;
+    justify-content: center;
+    padding-bottom: .5%;
+}
+.card:hover{
+    box-shadow: 0 8px ;
+}
+
+.name{
+    grid-area: Name;
+    padding-left: 2%;
+    padding-top: 1%;
+}
+
+.credentials{
+    grid-area: Credentials;
+    padding-left: 2%;
+}
+
+.gender{
+    grid-area: Gender;
+    padding-left: 2%;
+}
+
+.location{
+    grid-area: Location;
+    padding-left: 2%;
+}
+
+ul{
+    list-style-type: square;
+    grid-area: tax;
+    padding-left: 2%;
+    padding-top: 1%;
+}
+
+#taxTitle{
+    font-size: 20px;
+}
+
+.taxonomies{
+    margin-left: 4em;
+}
+
+.lastUpdated{
+    grid-area: lastUpdated;
+}
+
+.reviews{
+    font-size: 30px;
+    background-color:aquamarine;
+    grid-area: Reviews;
+    border-radius: 20px;
+    place-self: start center ;
+}
+
+#copy{
+    display:none;
+}
