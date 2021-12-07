@@ -1,12 +1,9 @@
 // RESULTS PAGE SCRIPTS
-
-
-
 let info =[
     {name:'John Doe' , creds:'M.D.', gender:'F', location:'NE', tax1:'pediactrics', tax2:'family medicine', tax3:'chiropractor', lUpdated: Date.now()},
     {name:'John Doe' , creds:'M.D.', gender:'F', location:'NE', tax1:'pediactrics', tax2:'family medicine', tax3:'chiropractor', lUpdated: Date.now()},
     {name:'John Doe' , creds:'M.D.', gender:'F', location:'NE', tax1:'pediactrics', tax2:'family medicine', tax3:'chiropractor', lUpdated: Date.now()}
-];
+]; // Query/format doctor information into this variable here
 
 
 // Not working yet
