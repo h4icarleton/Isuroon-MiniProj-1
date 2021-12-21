@@ -182,6 +182,16 @@ ul{
     place-self: start center ;
 }
 
+.reviews a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.reviews a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
 #copy{
     display:none;
 }
@@ -193,3 +203,46 @@ ul{
     margin-left: 45%;
     width: 10%;
 }
+
+#doctor {
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 0.8em;
+    /* padding-left: 1.5em; */
+}
+
+#review_container {
+    padding-left: 4em;
+    padding-right: 2em;
+}
+
+.review {
+    background-color: gray;
+    color: black;
+    padding-left: 2em;
+    border-radius:25px;
+    border-spacing: 2em;
+    /* height: 400px;
+    overflow: scroll; */
+}
+
+.nameanddate {
+    padding-top: 1em;
+}
+
+.details {
+    padding: 1em;
+    height: 400px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#back_button {
+    position: relative;
+    font-size: 40px;
+    text-decoration: none;
+    color: gray;
+    display: inline-block;
+    padding-top: 10px;
+}
+
