@@ -9,10 +9,11 @@
         <title>Isuroon MiniProj 1</title>
         <link rel="stylesheet" href="main.css" />
         <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
     <body>
-        <h1 id="Results"><button type="button" id="backToSearch">INSERT BACK BUTTON</button> Results:</h1>
-        
+        <h1 id="Results"><i class="glyphicon glyphicon-chevron-left" id="back-button"></i> Results:</h1>
+
         <div id="results_container">
             <!-- Insert Doc Card here using CreateCards() script-->
         </div>
@@ -31,7 +32,7 @@
             <button type="button" class="reviews">See Reviews</button>
         </div>
 
-        <script src="index.js"> </script>
+        <script src="results.js"> </script>
         <script>
             createCards(); // Find in index.js
         </script>
