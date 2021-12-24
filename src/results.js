@@ -26,9 +26,9 @@ let createCards= () => {// n = number of cards to create
     container.innerHTML += newCards;
 }
 
-const reducer = (addedCards, {name, creds, gender, location, tax1= '',tax2= '',tax3=''}, lUpdated) => addedCards +
+const reducer = (addedCards, {name, creds, gender, location, tax1= '',tax2= '',tax3=''}, lUpdated) => addedCards + 
         `<div class="card">` +
-        `<h2 class="name">Dr: ${name}</h2>` +
+        `<h2 class="name">Dr: ${name}</h2>` + 
             `<h3 class="credentials">Credentials: ${creds}</h3>` +
             `<h3 class="gender">Gender: ${gender}</h3>` +
             `<h3 class="location">Location: ${location}</h3>` +
@@ -38,5 +38,5 @@ const reducer = (addedCards, {name, creds, gender, location, tax1= '',tax2= '',t
                 `<li class="taxonomies 3">${tax3}</li>` +
             `</ul>` +
             `<h4 class="lastUpdated">Last Updated: ${lUpdated}</h4>` +
-            `<button type="button" class="reviews">See Reviews</button>` +
+            `<button type="button" class="reviews"><a href="review.html?name=Dr. ${name}">See Reviews</a></button>` +
         `</div>`;
