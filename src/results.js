@@ -38,5 +38,5 @@ const reducer = (addedCards, {name, creds, gender, location, tax1= '',tax2= '',t
                 `<li class="taxonomies 3">${tax3}</li>` +
             `</ul>` +
             `<h4 class="lastUpdated">Last Updated: ${lUpdated}</h4>` +
-            `<button type="button" class="reviews"><a href="review.html">See Reviews</a></button>` +
+            `<button type="button" class="reviews"><a href="review.html?name=Dr. ${name}">See Reviews</a></button>` +
         `</div>`;

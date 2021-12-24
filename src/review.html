@@ -21,9 +21,10 @@
         <script src="review.js"> </script>
         <script>
             window.onload = function(){
-                var doctors_name = localStorage.getItem("doctors_name");
-                localStorage.removeItem('doctors_name');
-                document.getElementById('doctor').innerHTML = doctors_name;
+                var href_string = window.location.href;
+                var url = new URL(href_string);
+                var doctors_name = url.searchParams.get("name");
+                document.getElementById('doctor').innerHTML = doctors_name + ":";
                 createReviewCards();
             };
         </script>
