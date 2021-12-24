@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Mini Project to test out technologies for the Isuroon project." />
+    <meta name="keywords" content="Isuroon, Health, Review, Doctors" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Hack4Impact Carleton" />
+    <title>Isuroon MiniProj 1</title>
+    <link rel="stylesheet" href="main.css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <h1 id="Results"><i class="glyphicon glyphicon-chevron-left" id="back-button"></i> Results:</h1>
+
+    <div id="results_container">
+        <!-- Insert Doc Card here using CreateCards() script-->
+    </div>
+
+    <div id="copy">
+        <h2 class="name">Dr: </h2>
+        <h3 class="credentials">Credentials:</h3>
+        <h3 class="gender">Gender:</h3>
+        <h3 class="location">Location:</h3>
+        <ul>
+            <h3 class="TaxonomiesTitle">Taxonomies</h3>
+            <li class="taxonomies 1">family medicine</li>
+            <li class="taxonomies 2">chiropractor</li>
+            <li class="taxonomies 3">chiropractor</li>
+        </ul>
+        <h4 class="lastUpdated">Last Updated: 12/21/2020</h4>
+        <button type="button" class="reviews">See Reviews</button>
+    </div>
+
+    <script src="../src/results.js"> </script>
+    <script>
+        createCards(); // Find in index.js
+    </script>
+
+</body>
+
+</html>
