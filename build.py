@@ -6,6 +6,11 @@ SRC = "templates"
 DST_EN = "en"
 DST_SO = "so"
 
+if not os.path.exists(DST_EN):
+    os.mkdir(DST_EN)
+if not os.path.exists(DST_SO):
+    os.mkdir(DST_SO)
+
 shutil.rmtree(DST_EN)
 shutil.rmtree(DST_SO)
 
