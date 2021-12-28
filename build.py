@@ -1,10 +1,17 @@
 from bs4 import BeautifulSoup
 from translation_dictionary import translations
+from dotenv import load_dotenv
 import shutil, os
 
-SRC = "templates"
-DST_EN = "en"
-DST_SO = "so"
+
+load_dotenv()
+SRC = os.getenv("SRC")
+DST_EN = os.getenv("DST_EN")
+DST_SO = os.getenv("DST_SO")
+assert SRC is not None
+assert DST_EN is not None
+assert DST_SO is not None
+
 
 if not os.path.exists(DST_EN):
     os.mkdir(DST_EN)
