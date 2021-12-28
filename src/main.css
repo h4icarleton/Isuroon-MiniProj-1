@@ -208,7 +208,6 @@ ul{
     display: inline-block;
     padding-top: 10px;
     padding-bottom: 0.8em;
-    /* padding-left: 1.5em; */
 }
 
 #review_container {
@@ -222,8 +221,6 @@ ul{
     padding-left: 2em;
     border-radius:25px;
     border-spacing: 2em;
-    /* height: 400px;
-    overflow: scroll; */
 }
 
 .nameanddate {
