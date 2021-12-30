@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
 
 <head>
     <meta charset="UTF-8" />
@@ -14,23 +14,13 @@
 </head>
 
 <body>
+    <i onclick="history.back()" class="glyphicon glyphicon-chevron-left" id="back_button"></i>
+    <h1 id="doctor"></h1>
     <div id="review_container">
-        <span><a href="results.html" class="glyphicon glyphicon-chevron-left" id="back_button"></a></span>
-        <h1 id="doctor"></h1>
         <!-- Insert review cards using script-->
     </div>
 
     <script src="../src/review.js"> </script>
-    <script>
-        window.onload = function () {
-            var href_string = window.location.href;
-            var url = new URL(href_string);
-            var doctors_name = url.searchParams.get("name");
-            document.getElementById('doctor').innerHTML = doctors_name + ":";
-            createReviewCards();
-        };
-    </script>
-
 </body>
 
 </html>

@@ -48,6 +48,7 @@ for root, _, filename in os.walk(DST_EN):
         contents = input.read()
         input.close()
         soup = BeautifulSoup(contents, "html.parser")
+        soup.find("html")["lang"] = "en"
         tags = soup.find_all(attrs={"tr": True})
         for tag in tags:
             if tag["tr"] in translations:
