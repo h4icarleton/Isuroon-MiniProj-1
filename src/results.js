@@ -1,8 +1,9 @@
 window.onload = initialize;
 
-
+let isEnglish;
 function initialize() {
     document.getElementById('back-button').addEventListener('click', onBackButtonPress);
+    isEnglish = document.getElementsByTagName('html').lang === 'en';
     queryNPI();
 }
 
@@ -15,7 +16,9 @@ const queryNPI = () => {
         .then(data => {
             /* Clean up proxied data and convert it to a JSON object */
             answer = JSON.parse(data.contents.replace('\\', ''))
+            console.groupCollapsed("Fetch Response")
             console.log(answer);
+            console.groupEnd();
         })
         .then(() => createCards());
     ;
@@ -23,8 +26,13 @@ const queryNPI = () => {
 
 const createCards = () => {
     const container = document.getElementById("results_container");
-    const newCards = answer.results.reduce(reducer, '');
-    container.innerHTML += newCards;
+    if (answer.hasOwnProperty('Errors')) {
+        container.innerHTML = `<div>Error. Redirecting to home page.</div>`
+        setTimeout(onBackButtonPress, 5000);
+    } else {
+        container.innerHTML += answer.results.reduce(reducer, '');
+    }
+
 }
 
 /* Redirects the user to the search page */
@@ -41,13 +49,13 @@ const reducer = (addedCards, individual) => {
     return addedCards +
         `<div class="card">
         <h2 class="name">${name}</h2 >
-        <h3 class="credentials">Credentials: ${individual.basic.credential}</h3>
-        <h3 class="gender">Gender: ${individual.basic.gender}</h3>
-        <h3 class="location">Location: ${addresses.join(', ')}</h3>
-        <ul><h3 class="TaxonomiesTitle">Taxonomies</h3>
+        <h3 class="credentials">${isEnglish ? "Credentials" : "Aqoonsiga"}: ${individual.basic.credential}</h3>
+        <h3 class="gender">${isEnglish ? "Gender" : "Jinsiga"}: ${individual.basic.gender}</h3>
+        <h3 class="location">${isEnglish ? "Location" : "Goobta"}: ${addresses.join(', ')}</h3>
+        <ul><h3 class="TaxonomiesTitle">${isEnglish ? "Taxonomies" : "Cashuuraha"}</h3>
             ${taxonomies}
         </ul>
-        <h4 class="lastUpdated">Last Updated: ${individual.basic.last_updated}</h4>
-        <button type="button" class="reviews"><a href="review.html?name=${name}&number=${individual.number}">See Reviews</a></button>
+        <h4 class="lastUpdated">${isEnglish ? "Last Updated" : "Update ugu Dambeeyay"}: ${individual.basic.last_updated}</h4>
+        <button type="button" class="reviews"><a href="review.html?name=${name}&number=${individual.number}">${isEnglish ? "See Reviews" : "Fiiri Faallooyinka"}</a></button>
     </div > `;
 };
