@@ -31,6 +31,9 @@ for root, _, filename in os.walk(DST_SO):
         input.close()
         soup = BeautifulSoup(contents, "html.parser")
         soup.find("html")["lang"] = "so"
+        submit = soup.find("input", {"type": "submit"})
+        if submit is not None:
+            submit["value"] = "Raadi"
         tags = soup.find_all(attrs={"tr": True})
         for tag in tags:
             if tag["tr"] in translations:
