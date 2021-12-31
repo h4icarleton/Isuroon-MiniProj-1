@@ -7,13 +7,13 @@
     <meta name="keywords" content="Isuroon, Health, Review, Doctors" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Hack4Impact Carleton" />
-    <title>Isuroon MiniProj 1</title>
+    <title tr="Search">Isuroon MiniProj Search</title>
     <link rel="stylesheet" href="../src/main.css" />
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 </head>
 
 <body>
-    <h1 id="findadoc">Find a Doctor:</h1>
+    <h1 id="findadoc" tr="fad">Find a Doctor:</h1>
     <form class="search_container" action="results.html" method="get">
         <!--Set the type of responses to individuals only-->
         <input type="hidden" name="enumeration_type" value="NPI-1" />
@@ -21,16 +21,16 @@
         <label class="item_1" for="fname" tr="fn">First name:</label>
         <input class="item_2" type="text" id="fname" name="first_name">
 
-        <label class="item_3" for="lname">Last name:</label>
+        <label class="item_3" for="lname" tr="ln">Last name:</label>
         <input class="item_4" type="text" id="lname" name="last_name">
 
-        <label class="item_5" for="city">City:</label>
+        <label class="item_5" for="city" tr="ct">City:</label>
         <input class="item_6" type="text" id="city" name="city" required>
 
-        <label class="item_7" for="postal">Postal code:</label>
+        <label class="item_7" for="postal" tr="pc">Postal code:</label>
         <input class="item_8" type="text" id="postal" name="postal_code" required>
 
-        <label class=" item_9" for="state">State:</label>
+        <label class=" item_9" for="state" tr="st">State:</label>
         <select class="item_10" name="state" id="state" required>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
@@ -85,7 +85,7 @@
             <option value="WY">Wyoming</option>
         </select>
         <div class="item_11">
-            <input type="submit" value="Search" class="navButton "></input>
+            <input type="submit" value="Search" class="navButton"></input>
         </div>
         <!--Address input must match location of practice rather than a mailing address-->
         <input type="hidden" name="address_purpose" value="LOCATION" />

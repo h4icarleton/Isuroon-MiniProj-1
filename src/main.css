@@ -253,10 +253,16 @@ ul{
 
 .backButton {
     margin: 0;
-    padding: 20px 0;
+    padding-top: 20px;
     background-color: white;
     position: sticky;
     top: 0;
     z-index: 1;
+}
+
+.backButton > * {
+    margin: 0;
+    display: inline;
+    font-size: 40px;
 }
 
