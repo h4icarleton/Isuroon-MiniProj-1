@@ -27,3 +27,13 @@ const reducer = (addedCards, { name, date, review }) => addedCards +
         <h2 class="nameanddate">${name}${date}</h3>
         <h2 class="details">${review}</h3>
     </div><br>`;
+
+const back = () => {
+    console.log(document.referrer);
+    console.log(window.location.origin);
+    if (document.referrer.includes(window.location.origin)) {
+        history.back();
+    } else {
+        location.href = "index.html";
+    }
+}
