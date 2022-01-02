@@ -15,10 +15,7 @@ const queryNPI = () => {
         .then(response => response.json())
         .then(data => {
             /* Clean up proxied data and convert it to a JSON object */
-            answer = JSON.parse(data.contents.replace('\\', ''))
-            console.groupCollapsed("Fetch Response")
-            console.log(answer);
-            console.groupEnd();
+            answer = JSON.parse(data.contents.replace('\\', ''));
         })
         .then(() => createCards());
     ;
