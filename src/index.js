@@ -1,16 +1,12 @@
 // RESULTS PAGE SCRIPTS
-
-
-
 let info =[
     {name:'John Doe' , creds:'M.D.', gender:'F', location:'NE', tax1:'pediactrics', tax2:'family medicine', tax3:'chiropractor', lUpdated: Date.now()},
     {name:'John Doe' , creds:'M.D.', gender:'F', location:'NE', tax1:'pediactrics', tax2:'family medicine', tax3:'chiropractor', lUpdated: Date.now()},
     {name:'John Doe' , creds:'M.D.', gender:'F', location:'NE', tax1:'pediactrics', tax2:'family medicine', tax3:'chiropractor', lUpdated: Date.now()}
-];
+]; // Query/format doctor information here
 
 
-// Not working yet
-let createCards= () => {// n = number of cards to create
+let createCards= () => {
     var container = document.getElementById("results_container");
     let newCards = info.reduce(reducer, '')
     console.log(newCards);

@@ -99,7 +99,8 @@ input {
     grid-row-start: 3;
     grid-row-end: 4;
 } 
-/*                               */
+
+
 /*Results Styling Here*/
 #Results{font-size: 40px;}
 #results_container{
@@ -108,7 +109,6 @@ input {
     display: grid;
     grid-template-columns: auto;
     overflow: auto;
-    /* align-content: center; */
 }
 
 .card{
