@@ -10,17 +10,17 @@ label {
 }
 input {
     width: 250px;
-    height: 15px;
+    height: 16px;
+}
+select {
+    width: 258px;
 }
 .search_container {
     display: grid;
     grid-gap: 10px 50px;
     margin: 20px;
 }
-.search_item {
-    display: inline-grid;
-}
- .item_1 {
+.item_1 {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -55,60 +55,67 @@ input {
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
-} 
+}
 .item_6 {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
-} 
+}
 .item_7 {
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
-} 
+}
 .item_8 {
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 2;
     grid-row-end: 3;
-} 
+}
 .item_9 {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
-} 
+}
 .item_9 {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
-} 
+}
 .item_9 {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
-} 
+}
 .item_10 {
-    width: 20px;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
-} 
-
-
+}
+.item_11 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+/*                               */
 /*Results Styling Here*/
 #Results{font-size: 40px;}
 #results_container{
-    height: 650px;
-    width: 100%;
+    margin: 25px;
     display: grid;
     grid-template-columns: auto;
     overflow: auto;
+    /* align-content: center; */
 }
 
 .card{
@@ -182,6 +189,80 @@ ul{
     place-self: start center ;
 }
 
+.reviews a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.reviews a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
 #copy{
     display:none;
 }
+
+.navButton{
+    font-size: 30px;
+    height: auto;
+    width: auto;
+    background-color:gray;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+#doctor {
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 0.8em;
+}
+
+#review_container {
+    padding-left: 4em;
+    padding-right: 2em;
+}
+
+.review {
+    background-color: gray;
+    color: black;
+    padding-left: 2em;
+    border-radius:25px;
+    border-spacing: 2em;
+}
+
+.nameanddate {
+    padding-top: 1em;
+}
+
+.details {
+    padding: 1em;
+    height: 400px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#back_button {
+    position: relative;
+    font-size: 40px;
+    text-decoration: none;
+    color: gray;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+.backButton {
+    margin: 0;
+    padding-top: 20px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.backButton > * {
+    margin: 0;
+    display: inline;
+    font-size: 40px;
+}
+
